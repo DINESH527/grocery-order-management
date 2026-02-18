@@ -69,43 +69,106 @@ This creates:
 - One-to-Many relationship (Customer → Orders)
 - Many-to-Many relationship (Orders ↔ Grocery Items)
 
+--
+## 📡 API Endpoints
 
+### 👤 Customer APIs
 
-📡 API Endpoints
+| Method | Endpoint | Description |
+|------|----------|-------------|
+| POST | /customers | Create a new customer |
+| GET | /customers | Get all customers |
+| GET | /customers/{id} | Get customer by ID |
+| PUT | /customers/{id} | Update specific customer details |
+| DELETE | /customers/{id} | Delete a customer |
 
-Customers
-POST /customers: Create a new customer
-GET /customers: Get all customers
-GET /customers/{id}: Get customer by ID
-PUT /customers/{id}: Update specific customer details
-DELETE /customers/{id}: Delete a customer
+### 🛒 Grocery Item APIs
 
-Grocery Items
-POST /items: Create a new item
-GET /items: Get all items
-GET /items/{id}: Get item by ID
-PUT /items/{id}: Update an item
-DELETE /items/{id}: Delete an item
+| Method | Endpoint | Description |
+|------|----------|-------------|
+| POST | /items | Create a new item |
+| GET | /items | Get all items |
+| GET | /items/{id} | Get item by ID |
+| PUT | /items/{id} | Update an item |
+| DELETE | /items/{id} | Delete an item |
 
-Orders
-POST /orders: Place a new order
-GET /orders: Get all orders
-GET /orders/{id}: Get order by ID
-DELETE /orders/{id}: Delete an order
+### 📦 Order APIs
+
+| Method | Endpoint | Description |
+|------|----------|-------------|
+| POST | /orders | Place a new order |
+| GET | /orders | Get all orders |
+| GET | /orders/{id} | Get order by ID |
+| DELETE | /orders/{id} | Delete an order |
 
 ---
 
-## 🛠 Database Configuration
+## 🌐 Base URL
 
-Example MySQL configuration in `application.properties`:
+http://localhost:8080
 
-````properties
+---
+
+## 🧪 Example JSON Request
+
+Create Customer:
+
+{
+  "name": "Dinesh",
+  "email": "dinesh@gmail.com",
+  "address": "Hyderabad",
+  "phone": "9876543210"
+}
+
+
+---
+
+## ⚙ Database Configuration
+
+Example MySQL configuration:
+
 spring.datasource.url=jdbc:mysql://localhost:3306/grocery_db
 spring.datasource.username=root
 spring.datasource.password=your_password
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+
+---
+
+
+
+
+## ▶ How to Run the Project
+
+1. Clone repository  
+git clone https://github.com/yourusername/grocery-order-management.git  
+
+2. Open in IntelliJ IDEA  
+
+3. Configure database in application.properties  
+
+4. Run GroceryApplication.java  
+
+---
+
+## 🧪 Testing APIs
+
+Use Postman to test APIs  
+
+Example:  
+POST http://localhost:8080/customers  
+
+---
+
+## 🎯 Features
+
+- Customer CRUD operations  
+- Grocery Item CRUD operations  
+- Order CRUD operations  
+- Entity relationships  
+- Exception handling  
+- RESTful API design  
+- Database integration  
 
 
