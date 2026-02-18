@@ -69,6 +69,30 @@ This creates:
 - One-to-Many relationship (Customer → Orders)
 - Many-to-Many relationship (Orders ↔ Grocery Items)
 
+
+
+📡 API Endpoints
+
+Customers
+POST /customers: Create a new customer
+GET /customers: Get all customers
+GET /customers/{id}: Get customer by ID
+PUT /customers/{id}: Update specific customer details
+DELETE /customers/{id}: Delete a customer
+
+Grocery Items
+POST /items: Create a new item
+GET /items: Get all items
+GET /items/{id}: Get item by ID
+PUT /items/{id}: Update an item
+DELETE /items/{id}: Delete an item
+
+Orders
+POST /orders: Place a new order
+GET /orders: Get all orders
+GET /orders/{id}: Get order by ID
+DELETE /orders/{id}: Delete an order
+
 ---
 
 ## 🛠 Database Configuration
